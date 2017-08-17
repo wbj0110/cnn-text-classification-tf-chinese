@@ -9,6 +9,7 @@ import data_helpers
 from text_cnn import TextCNN
 from tensorflow.contrib import learn
 import csv
+import pickle
 
 # Parameters
 # ==================================================
@@ -36,10 +37,14 @@ print("")
 
 # CHANGE THIS: Load data. Load your own data here
 if FLAGS.eval_train:
-   # x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
-    x, y, vocabulary, vocabulary_inv = data_helpers.load_data()
-
-   # Randomly shuffle data
+    # x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
+    # read vocabulary from file
+    vacabulary_path = os.path.join(FLAGS.checkpoint_dir, "..", "vocab")
+    vacabulary_file = open(vacabulary_path, "rb")
+    vacabulary = pickle.load(vacabulary_file)
+    vacabulary_file.close()
+    x_raw, x, y, vocabulary = data_helpers.load_data_test(vacabulary)
+    # Randomly shuffle data
     np.random.seed(10)
     shuffle_indices = np.random.permutation(np.arange(len(y)))
     x_shuffled = x[shuffle_indices]
