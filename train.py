@@ -146,6 +146,11 @@ with tf.Graph().as_default():
         pickle.dump(vocabulary, f1)
         f1.close()
 
+        # Write sequence
+        f1 = open(os.path.join(out_dir, "sequence_lenth"), "wb")
+        pickle.dump(sequence_length, f1)
+        f1.close()
+
         # Initialize all variables
         sess.run(tf.global_variables_initializer())
 

@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd98e90-ae5b-4ce8-8d08-c8861d2d0cae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chinese/test/neg.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chinese/test/pos.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/chinese/neg.txt" afterPath="$PROJECT_DIR$/data/chinese/neg.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/chinese/pos.txt" afterPath="$PROJECT_DIR$/data/chinese/pos.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_helpers.py" afterPath="$PROJECT_DIR$/data_helpers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eval.py" afterPath="$PROJECT_DIR$/eval.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train.py" afterPath="$PROJECT_DIR$/train.py" />
@@ -23,11 +19,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="95">
+              <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/Anaconda3/envs/tensorflow1.2/Lib/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,16 +61,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rt-polarity.neg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/rt-polarity.neg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="neg.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/chinese/neg.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eval.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="109" column="60" lean-forward="false" selection-start-line="109" selection-start-column="60" selection-end-line="109" selection-end-column="60" />
+            <state relative-caret-position="126">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -85,11 +83,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ntpath.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/Anaconda3/envs/tensorflow1.2/Lib/ntpath.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="data_helpers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_helpers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="195">
+              <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -100,7 +108,7 @@
       <file leaf-file-name="neg.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/chinese/test/neg.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="306">
               <caret line="367" column="4" lean-forward="false" selection-start-line="367" selection-start-column="4" selection-end-line="367" selection-end-column="4" />
               <folding />
             </state>
@@ -110,7 +118,7 @@
       <file leaf-file-name="pos.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/chinese/test/pos.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="306">
               <caret line="7519" column="7" lean-forward="false" selection-start-line="7519" selection-start-column="7" selection-end-line="7519" selection-end-column="7" />
               <folding />
             </state>
@@ -129,6 +137,8 @@
       <find>x_raw</find>
       <find>vocabulary</find>
       <find>if not os.path.exists(check</find>
+      <find>vocab</find>
+      <find>pad_sentences</find>
       <find>load</find>
     </findStrings>
     <dirStrings>
@@ -149,14 +159,14 @@
         <option value="$PROJECT_DIR$/data/chinese/test/pos.txt" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/data_helpers.py" />
         <option value="$PROJECT_DIR$/eval.py" />
+        <option value="$PROJECT_DIR$/data_helpers.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="522" />
-    <option name="y" value="128" />
+    <option name="x" value="441" />
+    <option name="y" value="149" />
     <option name="width" value="1400" />
     <option name="height" value="861" />
   </component>
@@ -186,44 +196,13 @@
             <path>
               <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
               <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="rt-polaritydata" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="rt-polaritydata" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
               <item name="runs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cnn-text-classification-tf-chinese" type="b2602c69:ProjectViewProjectNode" />
               <item name="cnn-text-classification-tf-chinese" type="462c0819:PsiDirectoryNode" />
               <item name="runs" type="462c0819:PsiDirectoryNode" />
-              <item name="1502960759" type="462c0819:PsiDirectoryNode" />
+              <item name="1502966590" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,7 +281,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cnn-text-classification-tf" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval.py" />
-      <option name="PARAMETERS" value="--eval_train --checkpoint_dir=&quot;./runs/1502960759/checkpoints&quot;" />
+      <option name="PARAMETERS" value="--eval_train --checkpoint_dir=&quot;./runs/1502966590/checkpoints/&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
@@ -371,19 +350,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="522" y="128" width="1400" height="861" extended-state="0" />
+    <frame x="441" y="149" width="1400" height="861" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1868759" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2810271" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39657632" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41797432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -427,8 +406,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/eval.py</url>
-          <line>81</line>
+          <line>94</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_helpers.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_helpers.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_helpers.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -438,7 +432,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -447,7 +441,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -546,6 +542,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="112" column="6" lean-forward="false" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -595,14 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Program Files/Anaconda3/envs/tensorflow1.2/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8370">
-          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/chinese/pos.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -643,22 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/chinese/test/neg.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="367" column="4" lean-forward="false" selection-start-line="367" selection-start-column="4" selection-end-line="367" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/chinese/test/pos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="7519" column="7" lean-forward="false" selection-start-line="7519" selection-start-column="7" selection-end-line="7519" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/chinese/pos.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -675,10 +648,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/text_cnn.py">
+    <entry file="file://$PROJECT_DIR$/data/chinese/test/neg.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="45" />
+        <state relative-caret-position="306">
+          <caret line="367" column="4" lean-forward="false" selection-start-line="367" selection-start-column="4" selection-end-line="367" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/chinese/test/pos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="7519" column="7" lean-forward="false" selection-start-line="7519" selection-start-column="7" selection-end-line="7519" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -691,28 +672,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/tensorflow1.2/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text_cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/tensorflow1.2/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="195">
+          <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
+    <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eval.py">
+    <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="109" column="60" lean-forward="false" selection-start-line="109" selection-start-column="60" selection-end-line="109" selection-end-column="60" />
+        <state relative-caret-position="95">
+          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding>
             <element signature="e#24#47#0" expanded="true" />
           </folding>

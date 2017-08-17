@@ -39,11 +39,24 @@ print("")
 if FLAGS.eval_train:
     # x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
     # read vocabulary from file
-    vacabulary_path = os.path.join(FLAGS.checkpoint_dir, "..", "vocab")
+
+    #vacabulary_path = FLAGS.checkpoint_dir.replace("checkpoints/","")
+
+    runs_path = os.path.abspath(os.path.join(FLAGS.checkpoint_dir, os.path.pardir))
+    vacabulary_path = os.path.join(runs_path, "vocab")
+    print("vacabulary path:"+vacabulary_path)
     vacabulary_file = open(vacabulary_path, "rb")
     vacabulary = pickle.load(vacabulary_file)
     vacabulary_file.close()
-    x_raw, x, y, vocabulary = data_helpers.load_data_test(vacabulary)
+
+    #load sequence length
+    sequence_path = os.path.join(runs_path, "sequence_lenth")
+    sequence_file = open(sequence_path, "rb")
+    sequence_length = pickle.load(sequence_file)
+    sequence_file.close()
+
+
+    x_raw, x, y, vocabulary = data_helpers.load_data_test(vacabulary,sequence_length)
     # Randomly shuffle data
     np.random.seed(10)
     shuffle_indices = np.random.permutation(np.arange(len(y)))

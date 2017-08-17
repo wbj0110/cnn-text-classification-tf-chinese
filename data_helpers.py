@@ -20,14 +20,14 @@ def load_data():
   return [x, y, vocabulary, vocabulary_inv]
 
 
-def load_data_test(vocabulary):
+def load_data_test(vocabulary,sequence_length):
   """
   Loads and preprocessed data for the MR dataset.
   Returns input vectors, labels, vocabulary, and inverse vocabulary.
   """
   # Load and preprocess data
   x_raw,sentences, labels = load_data_and_labels_test()
-  sentences_padded = pad_sentences(sentences)
+  sentences_padded = pad_sentences(sentences,sequence_length)
   #vocabulary, vocabulary_inv = build_vocab(sentences_padded)
 
 
@@ -58,12 +58,13 @@ def load_data_and_labels_test():
 
 
 
-def pad_sentences(sentences, padding_word="<PAD/>"):
+def pad_sentences(sentences, padding_word="<PAD/>",sequence_length=None):
   """
   Pads all sentences to the same length. The length is defined by the longest sentence.
   Returns padded sentences.
   """
-  sequence_length = max(len(x) for x in sentences)
+  if(sequence_length is None):
+     sequence_length = max(len(x) for x in sentences)
   padded_sentences = []
   for i in range(len(sentences)):
     sentence = sentences[i]
@@ -92,7 +93,7 @@ def build_input_data(sentences, labels, vocabulary):
   """
   Maps sentencs and labels to vectors based on a vocabulary.
   """
-  x = np.array([[vocabulary[word] for word in sentence] for sentence in sentences])
+  x = np.array([[vocabulary[word] for word in sentence if(word in vocabulary)] for sentence in sentences])
   y = np.array(labels)
   return [x, y]
 
