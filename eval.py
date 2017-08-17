@@ -36,16 +36,30 @@ print("")
 
 # CHANGE THIS: Load data. Load your own data here
 if FLAGS.eval_train:
-    x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
+   # x_raw, y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
+    x, y, vocabulary, vocabulary_inv = data_helpers.load_data()
+
+   # Randomly shuffle data
+    np.random.seed(10)
+    shuffle_indices = np.random.permutation(np.arange(len(y)))
+    x_shuffled = x[shuffle_indices]
+    y_shuffled = y[shuffle_indices]
+
+    # Split train/test set
+    # TODO: This is very crude, should use cross-validation
+    # dev_sample_index = -1 * int(FLAGS.dev_sample_percentage * float(len(y)))
+
+    x_test, x_dev = x_shuffled[-300:], x_shuffled[:-300]
+    y_test, y_dev = y_shuffled[-300:], y_shuffled[:-300]
     y_test = np.argmax(y_test, axis=1)
 else:
     x_raw = ["a masterpiece four years in the making", "everything is off."]
     y_test = [1, 0]
 
 # Map data into vocabulary
-vocab_path = os.path.join(FLAGS.checkpoint_dir, "..", "vocab")
-vocab_processor = learn.preprocessing.VocabularyProcessor.restore(vocab_path)
-x_test = np.array(list(vocab_processor.transform(x_raw)))
+# vocab_path = os.path.join(FLAGS.checkpoint_dir, "..", "vocab")
+# vocab_processor = learn.preprocessing.VocabularyProcessor.restore(vocab_path)
+# x_test = np.array(list(vocab_processor.transform(x_raw)))
 
 print("\nEvaluating...\n")
 
