@@ -27,7 +27,7 @@ def load_data_test(vocabulary,sequence_length):
   """
   # Load and preprocess data
   x_raw,sentences, labels = load_data_and_labels_test()
-  sentences_padded = pad_sentences(sentences,sequence_length)
+  sentences_padded = pad_sentences(sentences,sequence_length=sequence_length)
   #vocabulary, vocabulary_inv = build_vocab(sentences_padded)
 
 
