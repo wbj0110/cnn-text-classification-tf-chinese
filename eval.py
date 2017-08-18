@@ -62,13 +62,12 @@ if FLAGS.eval_train:
     shuffle_indices = np.random.permutation(np.arange(len(y)))
     x_shuffled = x[shuffle_indices]
     y_shuffled = y[shuffle_indices]
-
     # Split train/test set
     # TODO: This is very crude, should use cross-validation
     # dev_sample_index = -1 * int(FLAGS.dev_sample_percentage * float(len(y)))
-
-    x_test, x_dev = x_shuffled[-300:], x_shuffled[:-300]
-    y_test, y_dev = y_shuffled[-300:], y_shuffled[:-300]
+    x_test, x_dev = x_shuffled[-300:], x_shuffled[-300:]
+    y_test, y_dev = y_shuffled[-300:], y_shuffled[-300:]
+    x_raw_test = x_raw[-300:]
     y_test = np.argmax(y_test, axis=1)
 else:
     x_raw = ["a masterpiece four years in the making", "everything is off."]
@@ -120,7 +119,7 @@ if y_test is not None:
     print("Accuracy: {:g}".format(correct_predictions/float(len(y_test))))
 
 # Save the evaluation to a csv
-predictions_human_readable = np.column_stack((np.array(x_raw), all_predictions))
+predictions_human_readable = np.column_stack((np.array(x_raw_test), all_predictions))
 out_path = os.path.join(FLAGS.checkpoint_dir, "..", "prediction.csv")
 print("Saving evaluation to {0}".format(out_path))
 with open(out_path, 'w') as f:
