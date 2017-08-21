@@ -3,11 +3,7 @@
 import tensorflow as tf
 import numpy as np
 import os
-import time
-import datetime
 import data_helpers
-from text_cnn import TextCNN
-from tensorflow.contrib import learn
 import csv
 import pickle
 
@@ -66,9 +62,9 @@ if FLAGS.eval_train:
     # Split train/test set
     # TODO: This is very crude, should use cross-validation
     # dev_sample_index = -1 * int(FLAGS.dev_sample_percentage * float(len(y)))
-    x_test, x_dev = x_shuffled[-400:], x_shuffled[-300:]
-    y_test, y_dev = y_shuffled[-400:], y_shuffled[-300:]
-    x_raw_test = x_raw[-400:]
+    x_test, x_dev = x_shuffled[:], x_shuffled[-300:]
+    y_test, y_dev = y_shuffled[:], y_shuffled[-300:]
+    x_raw_test = x_raw[:]
     y_test = np.argmax(y_test, axis=1)
 else:
     x_raw = ["a masterpiece four years in the making", "everything is off."]
@@ -104,6 +100,7 @@ with graph.as_default():
         predictions = graph.get_operation_by_name("output/predictions").outputs[0]
 
         # Generate batches for one epoch
+        #batches = data_helpers.batch_iter(list(x_test), FLAGS.batch_size, 1, shuffle=False)
         batches = data_helpers.batch_iter(list(x_test), FLAGS.batch_size, 1, shuffle=False)
 
         # Collect the predictions here

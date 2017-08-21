@@ -95,7 +95,7 @@ def build_input_data(sentences, labels, vocabulary):
     Maps sentencs and labels to vectors based on a vocabulary.
     """
     # x = np.array([[vocabulary[word] for word in sentence if(word in vocabulary)] for sentence in sentences])
-    x = np.array([[int(vocabulary.get(word,0)) for word in sentence if (word in vocabulary)] for sentence in sentences])
+    x = np.array([[vocabulary.get(word,0) for word in sentence] for sentence in sentences])
     y = np.array(labels)
     return [x, y]
 
