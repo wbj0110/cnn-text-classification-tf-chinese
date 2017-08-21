@@ -23,7 +23,7 @@ tf.flags.DEFINE_integer("embedding_dim", 128, "Dimensionality of character embed
 tf.flags.DEFINE_string("filter_sizes", "1,2,3,4,5,6,8", "Comma-separated filter sizes (default: '1,2,3,4,5,6,8')")
 tf.flags.DEFINE_string("num_filters", "50,100,150,150,200,200,200", "Number of filters per filter size (default: 50,100,150,150,200,200,200)")
 tf.flags.DEFINE_float("dropout_keep_prob", 0.5, "Dropout keep probability (default: 0.5)")
-tf.flags.DEFINE_float("l2_reg_lambda", 0.0, "L2 regularization lambda (default: 0.0)")
+tf.flags.DEFINE_float("l2_reg_lambda", 0.8, "L2 regularization lambda (default: 0.0)")
 
 # Training parameters
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 64)")

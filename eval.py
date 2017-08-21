@@ -55,6 +55,7 @@ if FLAGS.eval_train:
     sequence_length = pickle.load(sequence_file)
     sequence_file.close()
 
+    print("sequence is {0}",sequence_length)
 
     x_raw, x, y, vocabulary = data_helpers.load_data_test(vacabulary,sequence_length)
     # Randomly shuffle data
@@ -65,9 +66,9 @@ if FLAGS.eval_train:
     # Split train/test set
     # TODO: This is very crude, should use cross-validation
     # dev_sample_index = -1 * int(FLAGS.dev_sample_percentage * float(len(y)))
-    x_test, x_dev = x_shuffled[-300:], x_shuffled[-300:]
-    y_test, y_dev = y_shuffled[-300:], y_shuffled[-300:]
-    x_raw_test = x_raw[-300:]
+    x_test, x_dev = x_shuffled[-400:], x_shuffled[-300:]
+    y_test, y_dev = y_shuffled[-400:], y_shuffled[-300:]
+    x_raw_test = x_raw[-400:]
     y_test = np.argmax(y_test, axis=1)
 else:
     x_raw = ["a masterpiece four years in the making", "everything is off."]
