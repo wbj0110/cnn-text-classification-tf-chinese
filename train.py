@@ -15,8 +15,10 @@ import pickle
 
 # Data loading params
 tf.flags.DEFINE_float("dev_sample_percentage", .1, "Percentage of the training data to use for validation")
-tf.flags.DEFINE_string("positive_data_file", "./data/rt-polaritydata/rt-polarity.pos", "Data source for the positive data.")
-tf.flags.DEFINE_string("negative_data_file", "./data/rt-polaritydata/rt-polarity.neg", "Data source for the negative data.")
+#tf.flags.DEFINE_string("positive_data_file", "./data/rt-polaritydata/rt-polarity.pos", "Data source for the positive data.")
+#tf.flags.DEFINE_string("negative_data_file", "./data/rt-polaritydata/rt-polarity.neg", "Data source for the negative data.")
+
+tf.flags.DEFINE_string("train_data_dir", "./data/chinese/train/", "Data source for the train data.")
 
 # Model Hyperparameters
 tf.flags.DEFINE_integer("embedding_dim", 128, "Dimensionality of character embedding (default: 128)")
@@ -60,7 +62,7 @@ print("Loading data...")
 # vocab_processor = learn.preprocessing.VocabularyProcessor(max_document_length)
 # x = np.array(list(vocab_processor.fit_transform(x_text)))
 
-x, y, vocabulary, vocabulary_inv = data_helpers.load_data()
+x, y, vocabulary, vocabulary_inv = data_helpers.load_data(FLAGS.train_data_dir)
 
 
 

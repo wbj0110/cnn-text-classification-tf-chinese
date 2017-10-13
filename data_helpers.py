@@ -4,15 +4,15 @@ import numpy as np
 import re
 import codecs
 import itertools
+import os
 
-
-def load_data():
+def load_data(train_data_dir):
     """
     Loads and preprocessed data for the MR dataset.
     Returns input vectors, labels, vocabulary, and inverse vocabulary.
     """
     # Load and preprocess data
-    sentences, labels = load_data_and_labels()
+    sentences, labels = load_data_and_labels(train_data_dir)
     sentences_padded = pad_sentences(sentences)
     vocabulary, vocabulary_inv = build_vocab(sentences_padded)
     x, y = build_input_data(sentences_padded, labels, vocabulary)
@@ -121,12 +121,25 @@ def clean_str(string):
     return string.strip().lower()
 
 
-def load_data_and_labels():
+def load_data_and_labels(train_data_dir=None):
     """
     Loads MR polarity data from files, splits the data into words and generates labels.
     Returns split sentences and labels.
     """
-    # Load data from files
+
+    path_list = []
+    for file in os.listdir(train_data_dir):
+        path = os.path.join(train_data_dir, file)
+        if os.path.isfile(path):
+            path_list.append(path)
+
+    print(path_list)
+
+
+    path_list
+
+
+            # Load data from files
     positive_examples = list(codecs.open("./data/chinese/pos.txt", "r", "utf-8").readlines())
     positive_examples = [s.strip() for s in positive_examples]
     negative_examples = list(codecs.open("./data/chinese/neg.txt", "r", "utf-8").readlines())
