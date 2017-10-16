@@ -128,11 +128,19 @@ def load_data_and_labels(train_data_dir=None):
     """
 
     path_list = []
+    label_names = []
 
+    #get label path and label name
     for file in os.listdir(train_data_dir):
         path = os.path.join(train_data_dir, file)
         if os.path.isfile(path):
             path_list.append(path)
+            label_name =  os.path.basename(path)
+            label_name = label_name.replace(".txt","")
+            print("label name:{}".format(label_name))
+            label_names.append(label_name)
+
+#TODO label_names write to files
 
     x_text = []
 
