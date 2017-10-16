@@ -128,31 +128,59 @@ def load_data_and_labels(train_data_dir=None):
     """
 
     path_list = []
+
     for file in os.listdir(train_data_dir):
         path = os.path.join(train_data_dir, file)
         if os.path.isfile(path):
             path_list.append(path)
 
-    print(path_list)
+    x_text = []
+
+    lable_vectors = []
+    #read  data from file director
+    for i,path in enumerate(path_list):
+       sample_datas = list(codecs.open(path, "r", "utf-8").readlines())
+       sample_datas = [s.strip() for s in sample_datas]
+       x_text.extend(sample_datas)
+       #tmp_vector = np.zeros(len(path_list), dtype=np.int)
+       tmp_vector = [0 for _ in range(0, len(path_list))]
+       #make the position of index i be 1
+       tmp_vector[i] = 1
+       lable_vectors.extend([tmp_vector for _ in sample_datas])
+       print("index {}, path {}".format(i, path))
+
+    '''
+          if (len(lable_vectors) == 0):
+             #lable_vectors = np.zeros((1,(len(path_list))), dtype=np.int)
+             #lable_vectors[0] = tmp_vector
+             lable_vectors = tmp_vector
+          else:
+             np.append(lable_vectors,tmp_vector)
+             # np.vstack((lable_vectors,tmp_vector))
+
+             print("index {}, path {}".format(i, path))
+    '''
+    #lable_vectors.reshape()
+    print("labels:{}".format(lable_vectors))
 
 
-    path_list
-
-
-            # Load data from files
-    positive_examples = list(codecs.open("./data/chinese/pos.txt", "r", "utf-8").readlines())
-    positive_examples = [s.strip() for s in positive_examples]
-    negative_examples = list(codecs.open("./data/chinese/neg.txt", "r", "utf-8").readlines())
-    negative_examples = [s.strip() for s in negative_examples]
-    # Split by words
-    x_text = positive_examples + negative_examples
+   # Load data from files
+    # positive_examples = list(codecs.open("./data/chinese/pos.txt", "r", "utf-8").readlines())
+    # positive_examples = [s.strip() for s in positive_examples]
+    # negative_examples = list(codecs.open("./data/chinese/neg.txt", "r", "utf-8").readlines())
+    # negative_examples = [s.strip() for s in negative_examples]
+    # x_text = positive_examples + negative_examples
     # x_text = [clean_str(sent) for sent in x_text]
+
+    # Split by words
     x_text = [list(s) for s in x_text if(s.strip() !='')]
 
+    y = np.array(lable_vectors)
     # Generate labels
-    positive_labels = [[0, 1] for _ in positive_examples]
-    negative_labels = [[1, 0] for _ in negative_examples]
-    y = np.concatenate([positive_labels, negative_labels], 0)
+    # positive_labels = [[0, 1] for _ in positive_examples]
+    # negative_labels = [[1, 0] for _ in negative_examples]
+    # y = np.concatenate([positive_labels, negative_labels], 0)
+    #return [x_text, y]
     return [x_text, y]
 
 
