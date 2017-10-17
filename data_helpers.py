@@ -6,17 +6,18 @@ import codecs
 import itertools
 import os
 
+
 def load_data(train_data_dir):
     """
     Loads and preprocessed data for the MR dataset.
     Returns input vectors, labels, vocabulary, and inverse vocabulary.
     """
     # Load and preprocess data
-    sentences, labels = load_data_and_labels(train_data_dir)
+    sentences, labels,label_list = load_data_and_labels(train_data_dir)
     sentences_padded = pad_sentences(sentences)
     vocabulary, vocabulary_inv = build_vocab(sentences_padded)
     x, y = build_input_data(sentences_padded, labels, vocabulary)
-    return [x, y, vocabulary, vocabulary_inv]
+    return [x, y, vocabulary, vocabulary_inv,label_list]
 
 
 def load_data_test(vocabulary, sequence_length):
@@ -139,9 +140,6 @@ def load_data_and_labels(train_data_dir=None):
             label_name = label_name.replace(".txt","")
             print("label name:{}".format(label_name))
             label_names.append(label_name)
-
-#TODO label_names write to files
-
     x_text = []
 
     lable_vectors = []
@@ -189,7 +187,7 @@ def load_data_and_labels(train_data_dir=None):
     # negative_labels = [[1, 0] for _ in negative_examples]
     # y = np.concatenate([positive_labels, negative_labels], 0)
     #return [x_text, y]
-    return [x_text, y]
+    return [x_text, y,label_names]
 
 
 def batch_iter(data, batch_size, num_epochs, shuffle=True):

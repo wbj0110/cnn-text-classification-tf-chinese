@@ -9,6 +9,7 @@ import data_helpers
 from text_cnn import TextCNN
 from tensorflow.contrib import learn
 import pickle
+import  json
 
 # Parameters
 # ==================================================
@@ -62,7 +63,7 @@ print("Loading data...")
 # vocab_processor = learn.preprocessing.VocabularyProcessor(max_document_length)
 # x = np.array(list(vocab_processor.fit_transform(x_text)))
 
-x, y, vocabulary, vocabulary_inv = data_helpers.load_data(FLAGS.train_data_dir)
+x, y, vocabulary, vocabulary_inv,label_list = data_helpers.load_data(FLAGS.train_data_dir)
 
 
 
@@ -156,6 +157,10 @@ with tf.Graph().as_default():
         pickle.dump(sequence_length, f1)
         f1.close()
 
+
+        #dump label_list to file for json
+        with open(os.path.join(out_dir, "lable.json"), "w") as f:
+            json.dump(label_list, f)
         # Initialize all variables
         sess.run(tf.global_variables_initializer())
 

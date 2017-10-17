@@ -7,6 +7,7 @@ import data_helpers
 import csv
 import pickle
 import data_helpers as dp
+import json
 
 # Parameters
 # ==================================================
@@ -17,7 +18,7 @@ tf.flags.DEFINE_string("negative_data_file", "./data/rt-polaritydata/rt-polarity
 
 # Eval Parameters
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 64)")
-tf.flags.DEFINE_string("checkpoint_dir", "../runs/1508205193/checkpoints/", "Checkpoint directory from training run")
+tf.flags.DEFINE_string("checkpoint_dir", "../runs/1508212646/checkpoints/", "Checkpoint directory from training run")
 tf.flags.DEFINE_boolean("eval_train", False, "Evaluate on all training data")
 
 # Misc Parameters
@@ -46,6 +47,11 @@ sequence_length = pickle.load(sequence_file)
 sequence_file.close()
 
 print("sequence is {0}",sequence_length)
+
+label_list = []
+label_json_path = os.path.join(runs_path, "lable.json")
+with open(label_json_path,'r') as load_f:
+    label_list = json.load(load_f)
 
 
 def classify(text):
@@ -76,5 +82,6 @@ def classify(text):
             predictions = graph.get_operation_by_name("output/predictions").outputs[0]
 
             single_predictions = sess.run(predictions, {input_x: x, dropout_keep_prob: 1.0})
-            print(single_predictions)
-            return single_predictions
+            predict_label = label_list[int(single_predictions)]
+            print(predict_label)
+            return predict_label
