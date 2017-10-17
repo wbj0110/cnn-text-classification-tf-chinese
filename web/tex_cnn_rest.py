@@ -5,17 +5,18 @@ from tornado import gen
 from tornado.ioloop import  IOLoop
 import  tornado.web
 import json
+import single_eval as sev
 
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
-            data = self.get_argument('name', 'Hello')
-            print(data)
-            self.write("Hello,This is TextCNN")
 
+            self.write("Hello,This is TextCNN")
 
 class ClassifyHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("this is Classfication for text,get method")
+        data = self.get_argument('q', 'Hello')
+        predict_result = sev.classify(data)
+        self.write("this is Classfication for text,get method and result:{}".format(predict_result))
     def post(self):
         self.write("this is classfication for text ,post method")
 

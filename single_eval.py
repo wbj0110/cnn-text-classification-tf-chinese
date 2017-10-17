@@ -17,7 +17,7 @@ tf.flags.DEFINE_string("negative_data_file", "./data/rt-polaritydata/rt-polarity
 
 # Eval Parameters
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 64)")
-tf.flags.DEFINE_string("checkpoint_dir", "", "Checkpoint directory from training run")
+tf.flags.DEFINE_string("checkpoint_dir", "../runs/1507793950/checkpoints/", "Checkpoint directory from training run")
 tf.flags.DEFINE_boolean("eval_train", False, "Evaluate on all training data")
 
 # Misc Parameters
@@ -76,4 +76,5 @@ def classify(text):
             predictions = graph.get_operation_by_name("output/predictions").outputs[0]
 
             single_predictions = sess.run(predictions, {input_x: x, dropout_keep_prob: 1.0})
+            print(single_predictions)
             return single_predictions
