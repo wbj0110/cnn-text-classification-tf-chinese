@@ -71,6 +71,11 @@ Replace the checkpoint dir with the output from the training. To use your own da
 - [Convolutional Neural Networks for Sentence Classification](http://arxiv.org/abs/1408.5882)
 - [A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification](http://arxiv.org/abs/1510.03820)
 
+##Visualizing TensorBoard
+
+tensorboard --logdir /PATH_TO_CODE/runs/1449760558/summaries/
+
+
 ##Restful
 
 pip install tornado
