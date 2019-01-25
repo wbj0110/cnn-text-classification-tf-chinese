@@ -25,7 +25,8 @@ tf.flags.DEFINE_boolean("log_device_placement", False, "Log placement of ops on 
 
 
 FLAGS = tf.flags.FLAGS
-FLAGS._parse_flags()
+#FLAGS._parse_flags()
+FLAGS.flag_values_dict()
 print("\nParameters:")
 for attr, value in sorted(FLAGS.__flags.items()):
     print("{}={}".format(attr.upper(), value))
@@ -120,5 +121,5 @@ if y_test is not None:
 predictions_human_readable = np.column_stack((np.array(x_raw_test), all_predictions))
 out_path = os.path.join(FLAGS.checkpoint_dir, "..", "prediction.csv")
 print("Saving evaluation to {0}".format(out_path))
-with open(out_path, 'w') as f:
+with open(out_path, 'w',encoding='utf-8') as f:
     csv.writer(f).writerows(predictions_human_readable)

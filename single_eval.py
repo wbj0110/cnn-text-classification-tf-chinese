@@ -18,7 +18,7 @@ tf.flags.DEFINE_string("negative_data_file", "./data/rt-polaritydata/rt-polarity
 
 # Eval Parameters
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 64)")
-tf.flags.DEFINE_string("checkpoint_dir", "../runs/1508212646/checkpoints/", "Checkpoint directory from training run")
+tf.flags.DEFINE_string("checkpoint_dir", "../runs/1548399951/checkpoints/", "Checkpoint directory from training run")
 tf.flags.DEFINE_boolean("eval_train", False, "Evaluate on all training data")
 
 # Misc Parameters
@@ -27,7 +27,8 @@ tf.flags.DEFINE_boolean("log_device_placement", False, "Log placement of ops on 
 
 
 FLAGS = tf.flags.FLAGS
-FLAGS._parse_flags()
+#FLAGS._parse_flags()
+FLAGS.flag_values_dict()
 print("\nParameters:")
 for attr, value in sorted(FLAGS.__flags.items()):
     print("{}={}".format(attr.upper(), value))
